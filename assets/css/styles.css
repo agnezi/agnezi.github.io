@@ -126,6 +126,7 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
+  width: 17rem;
 }
 .header .profile-content .name {
   color: #49515a;
