@@ -38,6 +38,7 @@
 </head>
 
 <body>
+  <div id="app">
 	<!-- ******HEADER****** -->
 	<header class="header">
 		<div class="container">
@@ -116,54 +117,31 @@
 							</div>
 							<!--//item-->
 							<hr class="divider" />
-							<div class="item row">
-								<a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/agnezi/front-end-recruitment"
-									target="_blank">
-									<img class="img-responsive project-image" src="assets/images/projects/project-2.png"
-										alt="project name" />
-								</a>
-								<div class="desc col-md-8 col-sm-8 col-xs-12">
-									<h3 class="title"><a href="https://github.com/agnezi/front-end-recruitment" target="_blank">Netshoes
-											front-end-recruitment (Em Desenvolvimento)</a></h3>
-									<p>Um teste para o recrutamento do grupo Netshoes. As tecnologias usadas nesse
-										projeto foram: Vue.js | Vuex | Webpack | Eslint | Bootstrap | FontAwesome |
-										Google Fonts.</p>
-									<p>No teste foi solicitado o desenvolvimento de uma loja básica, os produtos são
-										adicionados e retirados do carrinho e o valor é somado de forma dinâmica.</p>
-									<p>Nesse teste tive meu primeiro contato com o Vuex, que é uma library do Vue.js que facilita a forma
-										como os componentes trabalham com os dados dinâmicos. Foi um desafio grande pois ainda estou em
-										processo de aprendizado porém percebi nesse projeto o quão longe as Aplicações Web podem chegar.</p>
+              <project
+              gitlink="https://github.com/agnezi/front-end-recruitment"
+              projectimg="assets/images/projects/project-2.png"
+              projecttitle="Netshoes front-end-recruitment (Em Desenvolvimento)"
+              projecttechnologies="Um teste para o recrutamento do grupo Netshoes. As tecnologias usadas nesse projeto foram: Vue.js | Vuex | Webpack | Eslint | Bootstrap | FontAwesome | Google Fonts."
+              projectreason="No teste foi solicitado o desenvolvimento de uma loja básica, os produtos são adicionados e retirados do carrinho e o valor é somado de forma dinâmica."
+              projectlearned="Nesse teste tive meu primeiro contato com o Vuex, que é uma library do Vue.js que facilita a forma como os componentes trabalham com os dados dinâmicos. Foi um desafio grande pois ainda estou em processo de aprendizado porém percebi nesse projeto o quão longe as Aplicações Web podem chegar."
+              >
+              </project>
+              <project
+              gitlink="https://github.com/agnezi/superagendador-front-end-test"
+              projectimg="assets/images/projects/project-3.png"
+              projecttitle="Super Agendador - front-end-test (Em Desenvolvimento)"
+              projecttechnologies="Um teste para o recrutamento da empresa Super Agendador. As tecnologias usadas
+              para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
+              Bootstrap | GitHub API."
+              projectreason="Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
+              usuário"
+              projectlearned="Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
+              Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
+              como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
+              final por facilitar a tarefa."
+              >
 
-								</div>
-								<!--//desc-->
-							</div>
-							<!--//item-->
-
-							<div class="item row">
-								<a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/agnezi/superagendador-front-end-test"
-									target="_blank">
-									<img class="img-responsive project-image" src="assets/images/projects/project-3.png"
-										alt="project name" />
-								</a>
-								<div class="desc col-md-8 col-sm-8 col-xs-12">
-									<h3 class="title"><a href="https://github.com/agnezi/superagendador-front-end-test"
-											target="_blank">Super Agendador - front-end-test (Em Desenvolvimento)</a></h3>
-									<p>Um teste para o recrutamento da empresa Super Agendador. As tecnologias usadas
-										para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
-										Bootstrap | GitHub API.</p>
-									<p>Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
-										usuário</p>
-									<p>Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
-										Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
-										como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
-										final por facilitar a tarefa.</p>
-								</div>
-								<!--//desc-->
-							</div>
-							<!--//item-->
-
-
-
+              </project>
 						</div>
 						<!--//content-->
 					</div>
@@ -447,8 +425,10 @@
 		<!--//container-->
 	</footer>
 	<!--//footer-->
-
-	<!-- Javascript -->
+  </div>
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/js/vue.js"></script>
+  <script type="text/javascript" src="assets/js/index.js"></script>
 	<script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
