@@ -273,6 +273,18 @@ iframe {
   right: 0;
 }
 /* Projects Section */
+.content-select{
+  background-color: rgb(255,255,255);
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  width: min-content;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  line-height: 22px;
+  color: #778492;
+  cursor: pointer;
+}
 .projects .item {
   margin-bottom: 30px;
 }
