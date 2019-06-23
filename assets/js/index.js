@@ -14,7 +14,8 @@ Vue.component('project', {
 			<p>{{projecttechnologies}}</p>
 			<p>{{projectreason}}</p>
 			<p>{{projectlearned}}</p>
-		</div>`
+    </div>
+    </div>`
 })
 
 Vue.component('skill', {
@@ -42,5 +43,21 @@ Vue.component('education', {
 
 
 new Vue({
-	el: '#app',
+  el: '#app',
+  data: function() {
+    return {
+      dataShowJobs: true,
+      dataShowStudy: false,
+    }
+  },
+  methods: {
+    showJobs: function() {
+    this.dataShowJobs = !this.dataShowJobs;
+    this.dataShowStudy = !this.dataShowStudy;
+    },
+    showStudy: function() {
+      this.dataShowStudy = !this.dataShowStudy;
+      this.dataShowJobs = !this.dataShowJobs;
+    }
+  }
 })
