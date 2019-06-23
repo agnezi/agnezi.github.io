@@ -47,11 +47,17 @@ new Vue({
   data: function() {
     return {
       dataShowJobs: true,
+      dataShowStudy: false,
     }
   },
   methods: {
     showJobs: function() {
-    return this.dataShowJobs = !this.dataShowJobs;
+    this.dataShowJobs = !this.dataShowJobs;
+    this.dataShowStudy = !this.dataShowStudy;
+    },
+    showStudy: function() {
+      this.dataShowStudy = !this.dataShowStudy;
+      this.dataShowJobs = !this.dataShowJobs;
     }
   }
 })

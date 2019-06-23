@@ -59,6 +59,7 @@
     <div class="container sections-wrapper">
       <div class="row">
         <div class="primary col-md-8 col-sm-12 col-xs-12">
+
           <section class="about section">
             <div class="section-inner">
               <h2 class="heading">Sobre Mim</h2>
@@ -73,14 +74,94 @@
               </div>
             </div>
           </section>
+          <div class="row">
 
-          <section>
+            <div class="col-lg-1">
+              <section>
+                <div class="section-inner">
+                  <span class="heading content-select" v-on:click="showJobs">Jobs</span>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-1">
+              <section>
+                <div class="section-inner">
+                  <span class="heading content-select" v-on:click="showStudy">Study</span>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-9"></div>
+          </div>
+          <section v-show="dataShowJobs" class="latest section">
             <div class="section-inner">
-              <span class="heading content-select" v-on:click="showJobs">Jobs</span>
+              <h2 class="heading">Últimos Projetos</h2>
+              <div class="content">
+
+                <div class="item featured text-center">
+                  <h3 class="title">
+                    <a href="https://areadolojista.onstores.com.br/login" target="_blank">OnStores ( Enext )</a>
+                  </h3>
+                  <p class="summary">
+                    Sistema de integração de lojas
+                  </p>
+                  <div class="featured-image">
+                    <a href="https://areadolojista.onstores.com.br/login" target="_blank">
+                      <img class="img-responsive project-image" src="assets/images/projects/onstores.png"
+                        alt="OnStores" />
+                    </a>
+                  </div>
+
+                  <div class="desc text-left">
+                    <p>Sistema de integração de lojas em shoppings, onde o lojista tem controle de seus pedidos.</p>
+                    <p> Para esse projeto algumas das principais tecnologias utilizadas no front-end foram: Vue.Js | Vue
+                      Router | Vuex | </p>
+                    <p>Nesse projeto eu participei com implementações de novas features, melhorias e adaptações. Pude
+                      aprender como funciona o desenvolvimento de um sistema web utilizano Vue.js, o fluxo de dados
+                      rolando dentro da aplicação é alto e poder participar do desenvolvimento desse projeto foi muito
+                      importante principalmente para aprimoramento e entendimento da linguagem JavaScript.</p>
+                  </div>
+                  <!-- <a class="btn btn-cta-secondary" href="/home/tkoff0110/Pictures/onstores.png"><i
+                                class="fa fa-thumbs-o-up"></i>OnStores</a> -->
+                </div>
+                <hr class="divider" />
+                <project gitlink="https://www.osklen.com.br/" projectimg="assets/images/projects/osklen.png"
+                  projecttitle="Osklen ( Enext )"
+                  projecttechnologies="E-commerce de roupas: OCC ( Oracle Commerce Cloud ) | Knockoutjs | Jquery | SlickSlider | ES5."
+                  projectreason="O projeto foi desenvolvido conforme necessidade da marca para realizar vendas pelo e-commerce."
+                  projectlearned="Nesse projeto aprendi muito sobre a utilização da plataforma OCC da Oracle, bem como melhorei minhas skills com ES5. Aprendi sobre e-commerce tendo meu primeiro contato com uma loja de grande porte.">
+                </project>
+                <hr class="divider" />
+                <project gitlink="https://www.zema.com/" projectimg="assets/images/projects/zema.png"
+                  projecttitle="Zema ( Enext )"
+                  projecttechnologies="E-commerce de produtos variados como eletrodomésticos e eletronicos: OCC ( Oracle Commerce Cloud ) | Knockout.js | Jquery | SlickSlider | ES5."
+                  projectreason="E-commerce com diversos seguimentos, muito forte em Mina Gerais."
+                  projectlearned="Neste projeto tive envolvimento maior com o desenvolvimento do layout em algumas páginas como: Home, Catálogo, Pagina do Produto e Checkout.">
+                </project>
+                <hr class="divider" />
+                <project gitlink="https://github.com/agnezi/front-end-recruitment"
+                  projectimg="assets/images/projects/project-2.png"
+                  projecttitle="Netshoes front-end-recruitment (Em Desenvolvimento)"
+                  projecttechnologies="Um teste para o recrutamento do grupo Netshoes. As tecnologias usadas nesse projeto foram: Vue.js | Vuex | Webpack | Eslint | Bootstrap | FontAwesome | Google Fonts."
+                  projectreason="No teste foi solicitado o desenvolvimento de uma loja básica, os produtos são adicionados e retirados do carrinho e o valor é somado de forma dinâmica."
+                  projectlearned="Nesse teste tive meu primeiro contato com o Vuex, que é uma library do Vue.js que facilita a forma como os componentes trabalham com os dados dinâmicos. Foi um desafio grande pois ainda estou em processo de aprendizado porém percebi nesse projeto o quão longe as Aplicações Web podem chegar.">
+                </project>
+                <hr class="divider" />
+                <project gitlink="https://github.com/agnezi/superagendador-front-end-test"
+                  projectimg="assets/images/projects/project-3.png"
+                  projecttitle="Super Agendador - front-end-test (Em Desenvolvimento)" projecttechnologies="Um teste para o recrutamento da empresa Super Agendador. As tecnologias usadas
+                        para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
+                        Bootstrap | GitHub API." projectreason="Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
+                        usuário" projectlearned="Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
+                        Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
+                        como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
+                        final por facilitar a tarefa.">
+
+                </project>
+              </div>
             </div>
           </section>
-
-          <section v-show="dataShowJobs" class="latest section">
+          <section v-show="dataShowStudy" class="latest section">
             <div class="section-inner">
               <h2 class="heading">Últimos Projetos</h2>
               <div class="content">
@@ -115,6 +196,7 @@
                   <a class="btn btn-cta-secondary" href="https://github.com/agnezi/psitasguaru"><i
                       class="fa fa-thumbs-o-up"></i> PsitasGuaru - GitHub</a>
                 </div>
+
                 <hr class="divider" />
                 <project gitlink="https://github.com/agnezi/front-end-recruitment"
                   projectimg="assets/images/projects/project-2.png"
@@ -123,15 +205,16 @@
                   projectreason="No teste foi solicitado o desenvolvimento de uma loja básica, os produtos são adicionados e retirados do carrinho e o valor é somado de forma dinâmica."
                   projectlearned="Nesse teste tive meu primeiro contato com o Vuex, que é uma library do Vue.js que facilita a forma como os componentes trabalham com os dados dinâmicos. Foi um desafio grande pois ainda estou em processo de aprendizado porém percebi nesse projeto o quão longe as Aplicações Web podem chegar.">
                 </project>
+                <hr class="divider" />
                 <project gitlink="https://github.com/agnezi/superagendador-front-end-test"
                   projectimg="assets/images/projects/project-3.png"
                   projecttitle="Super Agendador - front-end-test (Em Desenvolvimento)" projecttechnologies="Um teste para o recrutamento da empresa Super Agendador. As tecnologias usadas
-                                    para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
-                                    Bootstrap | GitHub API." projectreason="Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
-                                    usuário" projectlearned="Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
-                                    Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
-                                    como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
-                                    final por facilitar a tarefa.">
+                          para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
+                          Bootstrap | GitHub API." projectreason="Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
+                          usuário" projectlearned="Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
+                          Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
+                          como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
+                          final por facilitar a tarefa.">
 
                 </project>
               </div>
@@ -149,9 +232,6 @@
                     seus
                     planteis.</p>
                 </div>
-
-
-
               </div>
             </div>
           </section>
@@ -242,29 +322,16 @@
             <div class="section-inner">
               <h2 class="heading">Educação</h2>
               <div class="content">
-                <education
-                  edugraduation="Tecnologia da Informação"
-                  eduplace="Universidade Paulista UNIP"
-                  edudate="(2016-2018)"
-                >
+                <education edugraduation="Tecnologia da Informação" eduplace="Universidade Paulista UNIP"
+                  edudate="(2016-2018)">
                 </education>
-                <education
-                  edugraduation="HTML5, CSS3 e JavaScript"
-                  eduplace="Alura | Codeacademy | Vue Mastery"
-                  edudate="(2017-2018)"
-                >
+                <education edugraduation="HTML5, CSS3 e JavaScript" eduplace="Alura | Codeacademy | Vue Mastery"
+                  edudate="(2017-2018)">
                 </education>
-                <education
-                  edugraduation="English Course"
-                  eduplace="Cultura Inglesa"
-                  edudate="2017-2019"
-                >
+                <education edugraduation="English Course" eduplace="Cultura Inglesa" edudate="2017-2019">
                 </education>
-                <education
-                  edugraduation="Cambridge KEY Certificate"
-                  eduplace="University of Cambridge"
-                  edudate="Never expires"
-                >
+                <education edugraduation="Cambridge KEY Certificate" eduplace="University of Cambridge"
+                  edudate="Never expires">
                 </education>
               </div>
             </div>
@@ -338,7 +405,7 @@
     </footer>
   </div>
   <!-- Javascript -->
-  <script type="text/javascript" src="assets/js/vue.js"></script>
+  <script type="text/javascript" src="assets/js/vue.min.js"></script>
   <script type="text/javascript" src="assets/js/index.js"></script>
   <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
