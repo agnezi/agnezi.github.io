@@ -74,23 +74,6 @@
               </div>
             </div>
           </section>
-          <div class="row">
-
-            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-              <section>
-                <div class="section-inner">
-                  <span class="heading content-select" v-on:click="showJobs">Jobs</span>
-                </div>
-              </section>
-            </div>
-            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-              <section>
-                <div class="section-inner">
-                  <span class="heading content-select" v-on:click="showStudy">Study</span>
-                </div>
-              </section>
-            </div>
-          </div>
           <section v-show="dataShowJobs" class="latest section">
             <div class="section-inner">
               <h2 class="heading">Últimos Projetos</h2>
@@ -136,80 +119,6 @@
                   projectreason="E-commerce com diversos seguimentos, muito forte em Mina Gerais."
                   projectlearned="Neste projeto tive envolvimento maior com o desenvolvimento do layout em algumas páginas como: Home, Catálogo, Pagina do Produto e Checkout.">
                 </project>
-              </div>
-            </div>
-          </section>
-          <section v-show="dataShowStudy" class="latest section">
-            <div class="section-inner">
-              <h2 class="heading">Últimos Projetos</h2>
-              <div class="content">
-
-                <div class="item featured text-center">
-                  <h3 class="title">
-                    <a href="https://github.com/agnezi/psitasguaru" target="_blank">PsitasGuaru ( Em
-                      desenvolvimento )</a>
-                  </h3>
-                  <p class="summary">
-                    Mini plantel de Calopsitas locado em Guarulhos.
-                  </p>
-                  <div class="featured-image">
-                    <a href="https://github.com/agnezi/psitasguaru" target="_blank">
-                      <img class="img-responsive project-image" src="assets/images/projects/project-1.png"
-                        alt="project name" />
-                    </a>
-                  </div>
-
-                  <div class="desc text-left">
-                    <p>Pequeno plantel de calopsitas locado na região de Guarulhos-SP tendo foco em
-                      preservar a espécie no local e dentro das leis e seguindo as boas normas para a
-                      saúde dos animais, são disponibilzados ambientes e alimentação necessária para
-                      que os casais gerem filhotes.</p>
-                    <p> Para esse projeto algumas das principais tecnologias utilizadas foram: Vue.Js |
-                      Webpack | Bootstrap | FontAwesome </p>
-                    <p>Esse foi meu primeiro projeto utilizando o Vue.js, nele aprendi como funciona o ambiente do Vue,
-                      a
-                      instância Vue, o Vue router, implementaçãoes com o Firebase tais como database() e storage()....
-                      Aprendi de forma melhor como utilizar os componentes do bootstrap principalmente o Grid.</p>
-                  </div>
-                  <a class="btn btn-cta-secondary" href="https://github.com/agnezi/psitasguaru"><i
-                      class="fa fa-thumbs-o-up"></i> PsitasGuaru - GitHub</a>
-                </div>
-
-                <hr class="divider" />
-                <project gitlink="https://github.com/agnezi/front-end-recruitment"
-                  projectimg="assets/images/projects/project-2.png"
-                  projecttitle="Netshoes front-end-recruitment (Em Desenvolvimento)"
-                  projecttechnologies="Um teste para o recrutamento do grupo Netshoes. As tecnologias usadas nesse projeto foram: Vue.js | Vuex | Webpack | Eslint | Bootstrap | FontAwesome | Google Fonts."
-                  projectreason="No teste foi solicitado o desenvolvimento de uma loja básica, os produtos são adicionados e retirados do carrinho e o valor é somado de forma dinâmica."
-                  projectlearned="Nesse teste tive meu primeiro contato com o Vuex, que é uma library do Vue.js que facilita a forma como os componentes trabalham com os dados dinâmicos. Foi um desafio grande pois ainda estou em processo de aprendizado porém percebi nesse projeto o quão longe as Aplicações Web podem chegar.">
-                </project>
-                <hr class="divider" />
-                <project gitlink="https://github.com/agnezi/superagendador-front-end-test"
-                  projectimg="assets/images/projects/project-3.png"
-                  projecttitle="Super Agendador - front-end-test (Em Desenvolvimento)" projecttechnologies="Um teste para o recrutamento da empresa Super Agendador. As tecnologias usadas
-                          para esse projeto foram: Vue.js | Vuex | Pug | Webpack | Eslint | FontAwesome |
-                          Bootstrap | GitHub API." projectreason="Uma SPA que consome a API do Github e exibe os repositórios e os favoritos do
-                          usuário" projectlearned="Nesse teste tive meu primeiro contato com o Axios, que usei junto ao Vue.Js para consumir a API do
-                          Github, foi ume experiência muito diferente, sabia que era possível consumir as API's mas não sabia
-                          como. Comecei desenvolvendo primeiramente utilizando flexbox mas optei por utilizar o bootstrap no
-                          final por facilitar a tarefa.">
-
-                </project>
-              </div>
-            </div>
-          </section>
-
-          <section class="projects section">
-            <div class="section-inner">
-              <h2 class="heading">Outros Projetos</h2>
-              <div class="content">
-                <div class="item">
-                  <h3 class="title"><a href="#">Gestão para Plantel ( Planejamento do Produto )</a></h3>
-                  <p class="summary">Ainda na fase de planejamento do produto, pretendo desenvolver uma aplicação de
-                    gestão de plantel para que criadores de aves possam ter um melhor controle do ciclo de ninhada em
-                    seus
-                    planteis.</p>
-                </div>
               </div>
             </div>
           </section>
