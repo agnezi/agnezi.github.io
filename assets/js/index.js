@@ -46,18 +46,22 @@ new Vue({
   el: '#app',
   data: function() {
     return {
-      dataShowJobs: true,
-      dataShowStudy: false,
+			projetosCondition: true,
+			ongoingCondition: false,
     }
   },
   methods: {
-    showJobs: function() {
-    this.dataShowJobs = !this.dataShowJobs;
-    this.dataShowStudy = !this.dataShowStudy;
+    showProjetos: function() {
+			if(!this.projetosCondition) {
+				this.projetosCondition = !this.projetosCondition;
+				this.ongoingCondition = !this.ongoingCondition;
+			} 
+		},
+		showOngoing: function() {
+			if(!this.ongoingCondition) {
+				this.projetosCondition = !this.projetosCondition;
+				this.ongoingCondition= !this.ongoingCondition;
+			} 
     },
-    showStudy: function() {
-      this.dataShowStudy = !this.dataShowStudy;
-      this.dataShowJobs = !this.dataShowJobs;
-    }
   }
 })
