@@ -64,7 +64,7 @@
             <div class="section-inner">
               <h2 class="heading">Sobre Mim</h2>
               <div class="content">
-                <p>Olá, meu nome é Jonas Agnezi, sou desenvolvedor Front-End, entusiasta Linux e tenho certeza que posso
+                <p>Olá, meu nome é Jonas Agnezi, sou desenvolvedor Front-End e tenho certeza que posso
                   desenvolver alguma ferramenta para ajudar alguem.</p>
                 <p>Tenho experiência no desenvolvimento de e-commerce, atuei a maior parte do tempo em desenvolvimento
                   de
@@ -72,9 +72,26 @@
               </div>
             </div>
           </section>
-          <section v-show="dataShowJobs" class="latest section">
+
+          <nav class="section-select-wrapper">
+            <ul class="section-select--ul">
+              <div class="col-xs-6 text-center">
+                <li @click="showProjetos" class="section-select--ul__li">
+                  Projetos
+                </li>
+              </div>
+              <div class="col-xs-6 text-center">
+                <li @click="showOngoing" class="section-select--ul__li">
+                  Ongoing
+                </li>
+              </div>
+            </ul>
+          </nav>
+
+          <section v-if="projetosCondition" class="latest section">
             <div class="section-inner">
               <h2 class="heading">Últimos Projetos</h2>
+              <hr class="divider" />
               <div class="content">
 
                 <div class="item featured text-center">
@@ -121,6 +138,51 @@
             </div>
           </section>
 
+          <section v-if="ongoingCondition" class="latest section">
+              <div class="section-inner">
+                <h2 class="heading">Últimos Projetos</h2>
+                <div class="content">
+  
+                  <!-- <div class="item featured text-center">
+                    <h3 class="title">
+                      <a href="https://areadolojista.onstores.com.br/login" target="_blank">OnStores ( Enext )</a>
+                    </h3>
+                    <p class="summary">
+                      Sistema de integração de lojas
+                    </p>
+                    <div class="featured-image">
+                      <a href="https://areadolojista.onstores.com.br/login" target="_blank">
+                        <img class="img-responsive project-image" src="assets/images/projects/onstores.png"
+                          alt="OnStores" />
+                      </a>
+                    </div>
+  
+                    <div class="desc text-left">
+                      <p>Sistema de integração de lojas em shoppings, onde o lojista tem controle de seus pedidos.</p>
+                      <p> Para esse projeto algumas das principais tecnologias utilizadas no front-end foram: Vue.Js | Vue
+                        Router | Vuex | </p>
+                      <p>Nesse projeto eu participei com implementações de novas features, melhorias e adaptações. Pude
+                        aprender como funciona o desenvolvimento de um sistema web utilizano Vue.js, o fluxo de dados
+                        rolando dentro da aplicação é alto e poder participar do desenvolvimento desse projeto foi muito
+                        importante principalmente para aprimoramento e entendimento da linguagem JavaScript.</p>
+                    </div>
+                  </div> -->
+                  <hr class="divider" />
+                  <project gitlink="https://www.portalpos.com.br" projectimg="assets/images/projects/portalpos.png"
+                    projecttitle="Portalpos ( Corebiz )"
+                    projecttechnologies="E-commerce de cursos: VTEX (Plataforma de e-commerce) | Vue.js | ES6 | Design Pattern AMD."
+                    projectlearned="Nesse projeto aprendi bastante sobre a plataforma VTEX, tendo bastante contato com o bundle webpack e aprendi também sobre regras de negócios interessantes onde o e-commerce foi desenvolvido.">
+                  </project>
+                  <hr class="divider" />
+                  <project gitlink="https://loja.chillibeans.com.br/dia-dos-pais" projectimg="assets/images/projects/chillibeans.png"
+                    projecttitle="ChilliBeans ( Corebiz )"
+                    projecttechnologies="E-commerce de acessórios de moda: VTEX ( Plataforma de e-commerce)"
+                    projectlearned="Neste projeto implementei tags do Google Tag Manager e fiz integração com o Facebook Pixel.">
+                  </project>
+                </div>
+              </div>
+            </section>
+          
           <section class="experience section">
             <div class="section-inner">
               <h2 class="heading">Experiência</h2>
