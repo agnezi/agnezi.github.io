@@ -1,3 +1,47 @@
+Vue.component('main-project', {
+	props: [
+		'titleurl', 'titlename', 'summary', 'imglinkurl', 'imgsrc', 'imgalt', 'introduction', 'technologies', 'whatidid'
+	],
+	template: 
+			`<div class="item featured text-center">
+				<h3 class="title">
+					<a
+						:href="titleurl"
+						target="_blank"
+						>{{titlename}}</a
+					>
+				</h3>
+				<p class="summary">
+					{{summary}}
+				</p>
+				<div class="featured-image">
+					<a
+						:href="imglinkurl"
+						target="_blank"
+					>
+						<img
+							class="img-responsive project-image"
+							:src="imgsrc"
+							:alt="imgalt"
+						/>
+					</a>
+				</div>
+
+				<div class="desc text-left">
+					<p>
+					{{introduction}}
+					</p>
+					<p>
+						{{technologies}}
+					</p>
+					<p>
+						{{whatidid}}
+					</p>
+				</div>
+			</div>`
+})
+
+
 Vue.component('project', {
 	props: [
 		'gitlink', 'projectimg', 'projecttitle', 'projecttechnologies', 'projectreason', 'projectlearned'
