@@ -1,3 +1,47 @@
+Vue.component('main-project', {
+	props: [
+		'titleurl', 'titlename', 'summary', 'imglinkurl', 'imgsrc', 'imgalt', 'introduction', 'technologies', 'whatidid'
+	],
+	template: 
+			`<div class="item featured text-center">
+				<h3 class="title">
+					<a
+						:href="titleurl"
+						target="_blank"
+						>{{titlename}}</a
+					>
+				</h3>
+				<p class="summary">
+					{{summary}}
+				</p>
+				<div class="featured-image">
+					<a
+						:href="imglinkurl"
+						target="_blank"
+					>
+						<img
+							class="img-responsive project-image"
+							:src="imgsrc"
+							:alt="imgalt"
+						/>
+					</a>
+				</div>
+
+				<div class="desc text-left">
+					<p>
+					{{introduction}}
+					</p>
+					<p>
+						{{technologies}}
+					</p>
+					<p>
+						{{whatidid}}
+					</p>
+				</div>
+			</div>`
+})
+
+
 Vue.component('project', {
 	props: [
 		'gitlink', 'projectimg', 'projecttitle', 'projecttechnologies', 'projectreason', 'projectlearned'
@@ -46,18 +90,22 @@ new Vue({
   el: '#app',
   data: function() {
     return {
-      dataShowJobs: true,
-      dataShowStudy: false,
+			projetosCondition: true,
+			ongoingCondition: false,
     }
   },
   methods: {
-    showJobs: function() {
-    this.dataShowJobs = !this.dataShowJobs;
-    this.dataShowStudy = !this.dataShowStudy;
+    showProjetos: function() {
+			if(!this.projetosCondition) {
+				this.projetosCondition = !this.projetosCondition;
+				this.ongoingCondition = !this.ongoingCondition;
+			} 
+		},
+		showOngoing: function() {
+			if(!this.ongoingCondition) {
+				this.projetosCondition = !this.projetosCondition;
+				this.ongoingCondition= !this.ongoingCondition;
+			} 
     },
-    showStudy: function() {
-      this.dataShowStudy = !this.dataShowStudy;
-      this.dataShowJobs = !this.dataShowJobs;
-    }
   }
 })

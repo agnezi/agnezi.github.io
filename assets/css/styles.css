@@ -171,7 +171,7 @@ iframe {
   padding: 30px;
 }
 .section .heading {
-  margin-top: 0;
+  margin-top: 40px;
   margin-bottom: 30px;
   color: #545e69;
   font-size: 24px;
@@ -181,6 +181,21 @@ iframe {
   font-size: 14px;
 }
 /* About Section */
+
+.section-select-wrapper{
+
+}
+
+.section-select--ul {
+  list-style: none;
+}
+
+.section-select--ul__li {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2rem;
+}
+
 /* Latest Section */
 .latest .item {
   margin-bottom: 30px;
